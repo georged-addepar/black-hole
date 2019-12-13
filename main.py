@@ -38,7 +38,7 @@ def get_today():
     cur.execute("USE SCHEMA GREENHOUSE")
     # execute sql with today's date
     today = datetime.date.today().strftime('%Y-%m-%d')
-    sql = config.get('sql', 'todays_applications')
+    sql = config.get('sql', 'todays_applications').format(today)
     logging.info('greenhouse query %s', sql)
     cur.execute(sql)
     # return candidates in a list of objects to decouple data storage implementation from the rest of the app.
