@@ -6,7 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-snowflake-connector-python = "*"
+snowflake-connector-python = "==2.1.1"
+textract = "*"
+pyarrow = "*"
 
 [requires]
 python_version = "3.7"
