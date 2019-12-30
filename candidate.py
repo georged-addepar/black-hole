@@ -12,6 +12,8 @@ class Candidate:
         self.file_name = file_name
         self.url = url
         self.resume = None
+        self.matched = []
+        self.gh_link = f'https://addepar.greenhouse.io/people/{self.candidate_id}'
 
     def __repr__(self):
         return 'candidate id %s file name %s' % (self.candidate_id, self.file_name)
